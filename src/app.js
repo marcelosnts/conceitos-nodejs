@@ -32,11 +32,11 @@ app.get("/repositories", (request, response) => {
 });
 
 app.post("/repositories", (request, response) => {
-  const {title, url, techs} = request.body;
+  const {id, title, url, techs} = request.body;
 
   //const serializedTechs = handleTechs(techs);
   //const repository = handleRepository(0, title, url, serializedTechs, 0);
-  const repository = handleRepository(0, title, url, techs, 0);
+  const repository = handleRepository(id, title, url, techs, 0);
   
   repositories.push(repository);
 
